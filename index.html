@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>赤龍 · Crimson Loong</title>
+</head>
+<body>
+  <canvas id="c"></canvas>
+
+  <!-- Calligraphic Loading Veil -->
+  <div id="loader" aria-live="polite">
+    <div class="loader-aura"></div>
+    <div class="loader-content">
+      <div class="loader-kanji">赤 龍</div>
+      <div class="loader-sub">CRIMSON LOONG</div>
+      <div class="loader-rule"></div>
+      <div class="loader-act" id="loader-status">FORGING PROCEDURAL WORLD</div>
+    </div>
+  </div>
+
+  <!-- Subtle Bottom-Left Credit -->
+  <div id="credit" class="ui-fade">
+    <span>PURE THREE.JS · EVERY MESH, TEXTURE &amp; NOTE IS CODE · ZERO EXTERNAL ASSETS</span>
+  </div>
+
+  <!-- Top-Left Act Banner (subtle, auto-fades on act change or hover) -->
+  <div id="act-banner" class="ui-fade">
+    <span class="act-num" id="act-num">ACT I</span>
+    <span class="act-sep">·</span>
+    <span class="act-title" id="act-title">FIRST LIGHT</span>
+  </div>
+
+  <!-- Bottom-Right Sound Pill (Always Accessible) -->
+  <button id="sound-btn" class="pill-btn" type="button" title="Toggle Procedural Sound (M)">
+    <span class="sound-dot"></span>
+    <span id="sound-label">click for sound</span>
+  </button>
+
+  <!-- Minimal Auto-Dimming Interactive Dock (Bottom-Center) -->
+  <nav id="hud-dock" class="ui-fade" aria-label="Scene Controls">
+    <div class="dock-acts" id="dock-acts">
+      <button class="act-pip active" data-act="0" title="Act I: First Light (1)">I</button>
+      <button class="act-pip" data-act="1" title="Act II: Gathering Storm (2)">II</button>
+      <button class="act-pip" data-act="2" title="Act III: Twin Dragons (3)">III</button>
+      <button class="act-pip" data-act="3" title="Act IV: Celestial Helix (4)">IV</button>
+      <button class="act-pip" data-act="4" title="Act V: Elemental Clash (5)">V</button>
+      <button class="act-pip" data-act="5" title="Act VI: Dawn Renewal (6)">VI</button>
+    </div>
+
+    <div class="dock-progress-wrap" id="timeline-scrub" title="Scrub Timeline">
+      <div class="dock-progress-fill" id="timeline-fill"></div>
+    </div>
+
+    <div class="dock-actions">
+      <button class="dock-btn" id="btn-pause" type="button" title="Pause / Resume (Space)">Pause</button>
+      <button class="dock-btn" id="btn-cam" type="button" title="Switch Cinematic / Free Orbit Camera (O)">Orbit</button>
+      <button class="dock-btn" id="btn-vista" type="button" title="Cycle Camera Vistas (V)">Vista</button>
+      <button class="dock-btn accent" id="btn-roar" type="button" title="Trigger Dragon Roar &amp; Flame (F)">Roar</button>
+      <button class="dock-btn" id="btn-quality" type="button" title="Toggle Ultra / Balanced Quality (Q)">Ultra</button>
+      <button class="dock-btn" id="btn-hide" type="button" title="Hide HUD (H)">Zen</button>
+    </div>
+  </nav>
+
+  <!-- Subtle Orbit Hint when Free Orbit is active -->
+  <div id="orbit-hint">DRAG TO ORBIT · SCROLL TO ZOOM · RIGHT-DRAG TO PAN · PRESS O FOR DIRECTOR</div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
